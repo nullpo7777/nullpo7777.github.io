@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //保存ボタンのイベント登録
     document.getElementById("save").addEventListener("click",function() {
-        button_save();
+        //button_save();
+        document.cookie = "test=テスト";
     });
 });
