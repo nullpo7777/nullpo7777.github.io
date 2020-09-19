@@ -7,7 +7,7 @@ function getSelectIndex(elementId){
     }
 }
 
-function getCokkie(keyName){
+function getCookie(keyName){
     var cookies = document.cookie;
     var cookiesArray = cookies.split(";");
 
