@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("Temperature_Normal").value = getCookie("Temperature_Normal");
 
     var temp_1_Elements = document.getElementById("Temperature_1_select");
-    //temp_1_Elements[parseInt(getCookie("Temperature_1_select"))].selected = true;
+    temp_1_Elements[parseInt(getCookie("Temperature_1_select"))].selected = true;
     console.log(getCookie("Temperature_1_select"));
     console.log(parseInt(getCookie("Temperature_1_select")));
     document.getElementById("Temperature_1_min").value = getCookie("Temperature_1_min");
