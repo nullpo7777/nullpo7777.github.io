@@ -1,5 +1,5 @@
 export default () => {
-    alert(document.cookie);
+    alert('"');
 /*
     function randomRangeTemperature(min, max){
         var range = max - min + 0.1;
