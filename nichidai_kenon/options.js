@@ -53,24 +53,24 @@ function button_save(){
 
 //ロード時
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Temperature_Normal").value = getCookie(Temperature_Normal);
+    document.getElementById("Temperature_Normal").value = getCookie("Temperature_Normal");
 
     var temp_1_Elements = document.getElementById("Temperature_1_select");
-    //temp_1_Elements[parseInt(getCookie(Temperature_1_select))].selected = true;
-    console.log(getCookie(Temperature_1_select));
-    document.getElementById("Temperature_1_min").value = getCookie(Temperature_1_min);
-    document.getElementById("Temperature_1_max").value = getCookie(Temperature_1_max);
+    //temp_1_Elements[parseInt(getCookie("Temperature_1_select"))].selected = true;
+    console.log(getCookie("Temperature_1_select"));
+    document.getElementById("Temperature_1_min").value = getCookie("Temperature_1_min");
+    document.getElementById("Temperature_1_max").value = getCookie("Temperature_1_max");
 
     var temp_2_Elements = document.getElementById("Temperature_2_select");
-    //temp_2_Elements[parseInt(getCookie(Temperature_2_select))].selected = true;
-    document.getElementById("Temperature_2_min").value = getCookie(Temperature_2_min);
-    document.getElementById("Temperature_2_max").value = getCookie(Temperature_2_max);
+    //temp_2_Elements[parseInt(getCookie("Temperature_2_select"))].selected = true;
+    document.getElementById("Temperature_2_min").value = getCookie("Temperature_2_min");
+    document.getElementById("Temperature_2_max").value = getCookie("Temperature_2_max");
 
-    document.getElementById("Behavior_1").value = getCookie(Behavior_1);
-    document.getElementById("Behavior_2").value = getCookie(Behavior_2);
-    document.getElementById("Behavior_3").value = getCookie(Behavior_3);
+    document.getElementById("Behavior_1").value = getCookie("Behavior_1");
+    document.getElementById("Behavior_2").value = getCookie("Behavior_2");
+    document.getElementById("Behavior_3").value = getCookie("Behavior_3");
 
-    document.getElementById("Notes").value = getCookie(Notes);
+    document.getElementById("Notes").value = getCookie("Notes");
 
     //保存ボタンのイベント登録
     document.getElementById("save").addEventListener("click",function() {
