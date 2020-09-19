@@ -9,7 +9,7 @@ function getSelectIndex(elementId){
 
 function getCookie(keyName){
     var cookies = document.cookie;
-    var cookiesArray = cookies.split(";");
+    var cookiesArray = cookies.split("; ");
 
     for(var c of cookiesArray){
         var cArray = c.split("=");
@@ -56,13 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("Temperature_Normal").value = getCookie(Temperature_Normal);
 
     var temp_1_Elements = document.getElementById("Temperature_1_select");
-    //temp_1_Elements[parseInt(getCookie(Temperature_1_select))].selected = true;
-    console.log(parseInt(getCookie(Temperature_1_select)));
+    temp_1_Elements[parseInt(getCookie(Temperature_1_select))].selected = true;
     document.getElementById("Temperature_1_min").value = getCookie(Temperature_1_min);
     document.getElementById("Temperature_1_max").value = getCookie(Temperature_1_max);
 
     var temp_2_Elements = document.getElementById("Temperature_2_select");
-    //temp_2_Elements[parseInt(getCookie(Temperature_2_select))].selected = true;
+    temp_2_Elements[parseInt(getCookie(Temperature_2_select))].selected = true;
     document.getElementById("Temperature_2_min").value = getCookie(Temperature_2_min);
     document.getElementById("Temperature_2_max").value = getCookie(Temperature_2_max);
 
