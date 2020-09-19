@@ -33,44 +33,11 @@ function button_save(){
     var Behavior_3 = document.getElementById("Behavior_3").value;
     var Notes = document.getElementById("Notes").value;
 
-
-
-
-    document.cookie = "Temperature_Normal=" + Temperature_Normal;
-    document.cookie = "Temperature_1_select=" + Temperature_1_select;
-    document.cookie = "Temperature_1_min=" + Temperature_1_min;
-    document.cookie = "Temperature_1_max=" + Temperature_1_max;
-    document.cookie = "Temperature_2_select=" + Temperature_2_select;
-    document.cookie = "Temperature_2_min=" + Temperature_2_min;
-    document.cookie = "Temperature_2_max=" + Temperature_2_max;
-    document.cookie = "Behavior_1=" + Behavior_1;
-    document.cookie = "Behavior_2=" + Behavior_2;
-    document.cookie = "Behavior_3=" + Behavior_3;
-    document.cookie = "Notes=" + Notes;
-
-    alert("保存しました");
+    document.getElementById("output").value = 'javascript:(function(){function c(d,e){return Math.floor(10*(d+Math.random()*(e-d+.1)))/10}var a='+Temperature_Normal+',f='+Temperature_1_select+',g=c(parseFloat('+Temperature_1_min+'),parseFloat('+Temperature_1_max+')),h='+Temperature_2_select+',k=c(parseFloat('+Temperature_2_min+'),parseFloat('+Temperature_2_max+')),b='+Behavior_1+',l='+Behavior_2+',m='+Behavior_3+',n='+Notes+';document.getElementById("Ent_Input_Temperature_Normal_String").value=a;document.getElementById("Ent_Input_Temperature_1_Time")[f].selected=!0;document.getElementById("Ent_Input_Temperature_1_String").value=g;document.getElementById("Ent_Input_Temperature_2_Time")[h].selected=!0;document.getElementById("Ent_Input_Temperature_2_String").value=k;for(a=1;12>=a;a++)document.getElementById("Check_"+a.toString()+"_N").click();document.getElementById("Ent_Input_Text_Behavior_1").value=b;document.getElementById("Ent_Input_Text_Behavior_2").value=l;document.getElementById("Ent_Input_Text_Behavior_3").value=m;document.getElementById("Ent_Input_Summary").value=n;b=document.documentElement;window.scroll(0,b.scrollHeight-b.clientHeight)})();';
 }
 
 //ロード時
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Temperature_Normal").value = getCookie("Temperature_Normal");
-
-    var temp_1_Elements = document.getElementById("Temperature_1_select");
-    temp_1_Elements[parseInt(getCookie("Temperature_1_select"))].selected = true;
-    document.getElementById("Temperature_1_min").value = getCookie("Temperature_1_min");
-    document.getElementById("Temperature_1_max").value = getCookie("Temperature_1_max");
-
-    var temp_2_Elements = document.getElementById("Temperature_2_select");
-    temp_2_Elements[parseInt(getCookie("Temperature_2_select"))].selected = true;
-    document.getElementById("Temperature_2_min").value = getCookie("Temperature_2_min");
-    document.getElementById("Temperature_2_max").value = getCookie("Temperature_2_max");
-
-    document.getElementById("Behavior_1").value = getCookie("Behavior_1");
-    document.getElementById("Behavior_2").value = getCookie("Behavior_2");
-    document.getElementById("Behavior_3").value = getCookie("Behavior_3");
-
-    document.getElementById("Notes").value = getCookie("Notes");
-
     //保存ボタンのイベント登録
     document.getElementById("save").addEventListener("click",function() {
         button_save();
